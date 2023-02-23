@@ -135,7 +135,7 @@ export default {
         datasets:[
           {
             backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
-            data:[]
+            data:[30,30,20,20]
           }
         ]
       }
