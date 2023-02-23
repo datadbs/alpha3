@@ -2,7 +2,7 @@
   <div>
     <div id="top-wrapper">
       <font-awesome-icon icon="fa-solid fa-chevron-left" onclick="window.hrf='/index"/>
-      <a href="/search"><input v-model="stock.stockName" placeholder="종목검색"/></a> 
+      <router-link to="/search"><input v-model="stock.stockName" placeholder="종목검색"/></router-link> 
       <button id="cart">카트</button>
       <button id="order">주문</button>
     </div>
