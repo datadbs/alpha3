@@ -2,7 +2,7 @@
     <div id="menu-wrapper">
             <table>
                 <tr>
-                    <th id="menu-tab"><a href="/menu"><font-awesome-icon icon="fa-solid fa-bars" /></a></th>
+                    <th id="menu-tab"><router-link to="/menu"><font-awesome-icon icon="fa-solid fa-bars" /></router-link></th>
                     <th><router-link to="/index">홈</router-link></th>
                     <th><router-link to="/cart">알파<br>카트</router-link></th>
                     <th><router-link to="/current">현재가</router-link></th>
