@@ -185,7 +185,7 @@ export default {
     for (let s=0; s<ret2.length; s++){
       retsum += Number(checkedStockPrices[s]/sum)*ret2[s]
     }
-    this.percent = retsum
+    this.percent = retsum.toFixed(3)
     //danger
     function transpose(matrix) {
       return matrix[0].map((col, i) => matrix.map(row => row[i]));
