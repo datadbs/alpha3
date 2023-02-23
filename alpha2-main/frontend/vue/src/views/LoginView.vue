@@ -12,6 +12,7 @@
               <input class="info" type="password" v-model="password" placeholder="비밀번호"><br><br>
               <input id="login" type="button" value="로그인" @click="login">
           </form>
+          <button id="signup" @click="$router.push('./signup')">회원가입</button>
       </div>
       <div class="bottom">
           <div class="logo">
@@ -108,5 +109,17 @@ export default {
       text-align: center;
       display: table;
       margin-top: 57px;
+  }
+
+  #signup {
+    position: absolute;
+    left: 28px;
+    bottom: 170px;
+    background-color: transparent;
+    color: #478BE1;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: left;
+    border: none;
   }
 </style>
