@@ -7,8 +7,8 @@
         <!-- 메인 -->
         <div>
             <div class="tabs">
-                <div class="tab" @click="selectedTab = 'first'" :class="{ 'active': selectedTab === 'first' }">총자산 포트폴리오</div>
-                <div class="tab" @click="selectedTab = 'sec'" :class="{ 'active': selectedTab === 'sec' }">배당 포트폴리오</div>
+                <div class="tab m-left" @click="selectedTab = 'first'" :class="{ 'active': selectedTab === 'first' }">총자산 포트폴리오</div>
+                <div class="tab m-right" @click="selectedTab = 'sec'" :class="{ 'active': selectedTab === 'sec' }">배당 포트폴리오</div>
             </div>
             <div v-if="selectedTab == 'first'">
                 <div id="main">
@@ -56,12 +56,12 @@
             </div>
              
             <div class="main-bottom">      
-                <div>
+                <div class="scrollable" ref="scrollable" v-on:scroll="handleScroll">
                     <table>
                     <thead>
                         <tr>
-                        <th>월</th>
-                        <th>금액</th>
+                            <th>월</th>
+                            <th>금액</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -180,9 +180,10 @@ export default {
   }
   
   .tab {
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
     font-size: small;
+    width: 150px;
   }
   
   .tab.active {
@@ -195,12 +196,11 @@ export default {
   table {
           border-collapse: collapse;
           width: 100%;
-          margin-bottom:100px;
       }
 
       td {
           text-align: center;
-          padding: 8px;
+          padding: 5px;
       }
 
       th {
@@ -216,6 +216,10 @@ export default {
         height: 30px;
         font-size: 15px;
         padding-left: 5px;
+    }
+
+    #top-wrapper span {
+        margin-left: 10px;
     }
 
     /* main */
@@ -237,6 +241,7 @@ export default {
     }
     .main-bottom {
         width: 100%;
+        height: 250px;
     }
     #port-select  {
         text-align: center;
@@ -255,7 +260,7 @@ export default {
     }
     .my-box table th {
         text-align: left;
-        padding-top: 10px;
+        padding-top: 5px;
     }
 
     .question {
@@ -273,7 +278,13 @@ export default {
         text-align: center;
         padding-bottom: 8px;
         background-color: #4868E1;
-        margin-top: 15px;
         color: white;
     }
+    .scrollable {
+        width: 100%;
+        height: 250px;
+        overflow-y: scroll;
+        margin-bottom: 40px;
+    }
+
 </style>

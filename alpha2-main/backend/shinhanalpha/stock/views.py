@@ -37,7 +37,7 @@ class StockDetailView(
 
     def get(self, request, *args, **kwargs):
         return self.retrieve(request, args, kwargs)
-
+    
 
 class CartListView(
     mixins.CreateModelMixin,

@@ -3,7 +3,7 @@
         <div>        
             <div id="top-wrapper">
                 <font-awesome-icon icon="fa-solid fa-chevron-left" onclick="window.href='/index"/>
-                <a href="/search"><input v-model="stock.stockName" placeholder="종목검색"/></a> 
+                <router-link to="/search"><input v-model="stock.stockName" placeholder="종목검색"/></router-link> 
                 <button id="cart">카트</button>
                 <button id="order">현재가</button>
             </div>
@@ -174,6 +174,7 @@ export default {
             .post("http://34.64.108.15:8000/api/stock/cart", data, { headers })
             .then(() => {
                 console.log('장바구니 데이터 반영');
+                location.href='/cart';
             })
             .catch((error) => {
                 let errorMsg = "";
@@ -440,11 +441,5 @@ body {
 .top_nav a{
     align-content: stretch;
 }
-
-/* popup */
-/* #popup {
-    position: absolute;
-} */
-
 
 </style>

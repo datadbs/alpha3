@@ -5,7 +5,7 @@
     </div>
     <div id="menus">
       <span id="portfolio">포트폴리오</span>
-      <button class="btn" id="create" onclick="location.href='./create';">포트폴리오 생성</button>
+      <button class="btn" id="create" @click="$router.push('./create');">포트폴리오 생성</button>
       <button class="btn" id="recommend" onclick="location.href='#';">포트폴리오 추천</button>
       <button class="btn" id="current" onclick="location.href='#';">포트폴리오 현황</button>
       <button class="btn" id="master" onclick="location.href='#';">고수의 포트폴리오</button>
