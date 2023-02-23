@@ -160,7 +160,7 @@ export default {
             };
             const headers = { 'Authorization': `JWT ${localStorage.getItem('access_token')}` };
             axios
-                .post("http://34.64.108.15:8000/api/portfolio/", data, { headers })
+                .post("http://34.64.108.15/api/portfolio/", data, { headers })
                 .then(() => {
                     alert('포트폴리오 반영');
                 })

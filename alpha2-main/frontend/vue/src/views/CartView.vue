@@ -233,7 +233,7 @@ export default {
     updatePort() {
             const headers = { 'Authorization': `JWT ${localStorage.getItem('access_token')}` };
             axios
-                .get("http://34.64.108.15:8000/api/portfolio/", { headers })
+                .get("http://34.64.108.15/api/portfolio/", { headers })
                   .then(res => {
                     this.darts.datasets[0].data = [res.data.results[0].stock,res.data.results[0].bond,res.data.results[0].real_asset,res.data.results[0].crypto];
                   })
@@ -244,7 +244,7 @@ export default {
     updateStock() {
       const headers = { 'Authorization': `JWT ${localStorage.getItem('access_token')}` };
             axios
-                .get("http://34.64.108.15:8000/api/stock/cart/", { headers })
+                .get("http://34.64.108.15/api/stock/cart/", { headers })
                   .then(res => {
                     this.stocks.push({name: res.data.results.stock_name, code: res.data.results.stock_code, price: res.data.results.stock_cp, quantity: res.data.results.stock_pg, checked: false});
                   })

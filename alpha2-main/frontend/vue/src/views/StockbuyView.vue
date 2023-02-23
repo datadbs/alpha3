@@ -171,7 +171,7 @@ export default {
         };
         const headers = { 'Authorization': `JWT ${localStorage.getItem('access_token')}` };
         axios
-            .post("http://34.64.108.15:8000/api/stock/cart", data, { headers })
+            .post("http://34.64.108.15/api/stock/cart", data, { headers })
             .then(() => {
                 console.log('장바구니 데이터 반영');
                 location.href='/cart';
