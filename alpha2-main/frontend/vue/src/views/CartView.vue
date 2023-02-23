@@ -211,7 +211,7 @@ export default {
     for (var i = 0; i < weights.length; i++) {
       result.push(weights[i] *std_devs[i]*std_devs[i]*100);
     }
-    console.log(result)
+    this.danger = Number(result.slice(-1)[0]).toFixed(3)
     
     return {
       
